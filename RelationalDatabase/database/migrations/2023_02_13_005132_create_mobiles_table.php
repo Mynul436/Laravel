@@ -13,7 +13,14 @@ return new class extends Migration
      */
     public function up()
     {
-        //
+        Schema::create('mobiles', function (Blueprint $table) {
+            $table->id();
+            $table->string('model');
+            $table->timestamps();
+            $table->unsignedBigInteger('customer_id');
+            $table->foreign('customer_id')->references('id')
+            ->on('customers')->onDelete('cascade');
+        });
     }
 
     /**
@@ -23,6 +30,6 @@ return new class extends Migration
      */
     public function down()
     {
-        //
+        Schema::dropIfExists('mobiles');
     }
 };
