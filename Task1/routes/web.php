@@ -32,6 +32,7 @@ Route::get('add-product',[ProductController::class,'add_product']);
 Route::get('show-accessable-category',[UserCategoryAccessController
 ::class,'show_accessable_category']);
 
+
 Route::get('customer-rend-cat-assigne',function(){
  $allCategory = Category::get()->pluck('id')->random(30);
 

@@ -3,6 +3,8 @@
 namespace Database\Seeders;
 
 // use Illuminate\Database\Console\Seeds\WithoutModelEvents;
+
+use App\Models\Car1;
 use Illuminate\Database\Seeder;
 
 class DatabaseSeeder extends Seeder
@@ -21,9 +23,11 @@ class DatabaseSeeder extends Seeder
         //     'email' => 'test@example.com',
         // ]);
 
-        $this->call([
-            AuthorSeeder::class,
-            PostSeeder::class
-        ]);
+        // $this->call([
+        //     AuthorSeeder::class,
+        //     PostSeeder::class
+        // ]);
+
+        Car1::factory()->count(100)->create();  
     }
 }
