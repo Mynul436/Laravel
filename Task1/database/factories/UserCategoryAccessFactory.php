@@ -2,7 +2,12 @@
 
 namespace Database\Factories;
 
+use App\Models\Category;
+use App\Models\Customer;
+use App\Models\Parentcategory;
+use App\Models\Product;
 use Illuminate\Database\Eloquent\Factories\Factory;
+use Nette\Utils\Random;
 
 /**
  * @extends \Illuminate\Database\Eloquent\Factories\Factory<\App\Models\UserCategoryAccess>
@@ -18,6 +23,12 @@ class UserCategoryAccessFactory extends Factory
     {
         return [
             //
+             'accessable_category'=>[
+                'customer_id'=>Customer::all()->random()->id,
+                'category_id'=>Category::all()->random()->id]
+
         ];
-    }
+}
+
+
 }

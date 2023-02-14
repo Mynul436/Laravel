@@ -35,13 +35,14 @@ Route::get('show-accessable-category',[UserCategoryAccessController
 
 Route::get('customer-rend-cat-assigne',function(){
  $allCategory = Category::get()->pluck('id')->random(30);
-
+//dd($allCategory);
+ //return $allCategory;
  UserCategoryAccess::where('customer_id',1)->update([
     'accessable_category'=>json_encode($allCategory)
  ]);
 
 $cast =  UserCategoryAccess::where('customer_id',1)->first();
 
-dd($allCategory,gettype($cast->accessable_category));
+//dd($allCategory,gettype($cast->accessable_category));
 
 });

@@ -14,7 +14,7 @@ class UserCategoryAccess extends Model
     }
     
     protected $casts = [
-        'accessable_category' => 'json',
+        'accessable_category' => 'array',
     ];
 
    

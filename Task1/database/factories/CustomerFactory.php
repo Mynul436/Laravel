@@ -18,6 +18,10 @@ class CustomerFactory extends Factory
     {
         return [
             //
+            'name'=>fake()->name,
+            'email'=>fake()->email,
+            'password'=>fake()->password,
+            'phone'=>fake()->phoneNumber,
         ];
     }
 }
