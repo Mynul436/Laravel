@@ -3,8 +3,10 @@
 use App\Http\Controllers\CategoryController;
 use App\Http\Controllers\ParentcategoryController;
 use App\Http\Controllers\ProductController;
+use App\Http\Controllers\UserCategoryAccessController;
 use App\Models\Category;
 use App\Models\Product;
+use App\Models\UserCategoryAccess;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -27,3 +29,18 @@ Route::get('add-parent-category',[ParentcategoryController::class,'add_parent_ca
 Route::get('add-category',[CategoryController::class,'add_category']);
 
 Route::get('add-product',[ProductController::class,'add_product']);
+Route::get('show-accessable-category',[UserCategoryAccessController
+::class,'show_accessable_category']);
+
+Route::get('customer-rend-cat-assigne',function(){
+ $allCategory = Category::get()->pluck('id')->random(30);
+
+ UserCategoryAccess::where('customer_id',1)->update([
+    'accessable_category'=>json_encode($allCategory)
+ ]);
+
+$cast =  UserCategoryAccess::where('customer_id',1)->first();
+
+dd($allCategory,gettype($cast->accessable_category));
+
+});
