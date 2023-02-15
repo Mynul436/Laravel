@@ -21,12 +21,24 @@ class UserCategoryAccessFactory extends Factory
      */
     public function definition()
     {
-        return [
-            //
-             'accessable_category'=>[
-                'customer_id'=>Customer::all()->random()->id,
-                'category_id'=>Category::all()->random()->id]
+        // $cat=Category::pluck('id')->random(30); 
 
+        // return [
+        //     //
+        //     //  'accessable_category'=>[
+        //     //     'customer_id'=>Customer::all()->random()->id,
+        //     //     'category_id'=>Category::all()->random()->id]
+        //     'accessable_category' => [$cat]
+
+        // ];
+
+        $category_id = Category::pluck('id')->random(20);
+        return [
+            
+            'accessable_category'=>
+                json_encode($category_id)
+            
+            
         ];
 }
 

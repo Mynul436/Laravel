@@ -32,8 +32,13 @@ Parentcategory::factory(10)
 ->has(Product::factory()->count(40))
 ->count(50))->create();
 
-Customer::factory(10)->has(UserCategoryAccess::factory()
-->count(10))->create();
+
+for($i=1;$i<=10;$i++){
+    Customer::factory($i)->has(UserCategoryAccess::factory()
+    ->count(1))->create();
+}
+// Customer::factory(1)->has(UserCategoryAccess::factory()
+// ->count(10))->create();
 
 
 }
