@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\CategoryController;
+use App\Http\Controllers\CollectionController;
 use App\Http\Controllers\CustomerController;
 use App\Http\Controllers\ParentcategoryController;
 use App\Http\Controllers\ProductController;
@@ -138,5 +139,6 @@ $users = [];
 
 Route::get('/at',[CustomerController::class,'at']);
 
+Route::get('/col',[CollectionController::class,'collection']);
 
 
