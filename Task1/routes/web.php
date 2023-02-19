@@ -5,6 +5,8 @@ use App\Http\Controllers\CollectionController;
 use App\Http\Controllers\CustomerController;
 use App\Http\Controllers\ParentcategoryController;
 use App\Http\Controllers\ProductController;
+use App\Http\Controllers\SongController;
+use App\Http\Controllers\StudentController;
 use App\Http\Controllers\UserCategoryAccessController;
 use App\Models\Category;
 use App\Models\Customer;
@@ -142,3 +144,6 @@ Route::get('/at',[CustomerController::class,'at']);
 Route::get('/col',[CollectionController::class,'collection']);
 
 
+Route::get('test',[StudentController::class,'test']);
+
+Route::get('add-song',[SongController::class,'add_song']);
