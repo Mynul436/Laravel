@@ -15,7 +15,7 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-// Route::get('/', function () {
+// Route::get('/he', function () {
 //     return view('welcome');
 // });
 
@@ -26,3 +26,6 @@ Route::get('/login', function () {
 Route::post('/login', [UserController::class, 'login']);  
 
 Route::get('/',[ProductController::class, 'index']);
+
+
+Route::get('/detail/{id}',[ProductController::class, 'detail']);

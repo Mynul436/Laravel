@@ -3,7 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-
+use App\Models\Product;
 class ProductController extends Controller
 {
     /**
@@ -12,9 +12,15 @@ class ProductController extends Controller
     public function index()
     {
         //
+       $data = Product::all();
 
-        return "welcome to product page";
+        return view('product',['products'=>$data]);
     }
+
+public function detail($id){
+     $data= product::find($id);
+     return view('detail',['product'=>$data]);
+}
 
     /**
      * Show the form for creating a new resource.

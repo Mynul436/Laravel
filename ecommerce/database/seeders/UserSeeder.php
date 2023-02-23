@@ -17,9 +17,16 @@ class UserSeeder extends Seeder
         //
 
         DB::table('users')->insert([
+            'name' => 'Baki Billah',
+            'email' => 'baki@gmail.com',  // unique() is not a valid method,
+         'password' => Hash::make('password1'),
+        ]);	
+
+        DB::table('users')->insert([
             'name' => 'Abdul Ahad',
             'email' => 'abdul@gmail.com',
-         'password' => Hash::make('password2'),
-        ]);	
+            'password' => Hash::make('password2'),
+        ]);
+
     }
 }
