@@ -17,6 +17,25 @@
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@3.3.7/dist/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
 </head>
 <body>
-    
+    {{-- <script>
+$(document).ready(function(){
+
+$("button").click(function(){
+    alert("All are set.");
+});
+
+});
+
+    </script> --}}
+{{View::make('header')}}
+@yield('content')
+{{View::make('footer')}}
+
 </body>
+<style >
+  .custom-login{
+        height: 500px;
+        padding-top: 100px;
+    }
+</style>
 </html>
