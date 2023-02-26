@@ -61,5 +61,19 @@ $("button").click(function(){
     .detail-img{
         height: 200px;
     }
+
+    .searched-item{
+        float: left;
+        width: 30%;
+        margin-bottom: 20px;
+    }
+    .cart-list-devider{
+        border-bottom: 1px solid #ccc;
+        margin-bottom: 20px;
+        padding-bottom: 20px;
+    }
+
+
+     
 </style>
 </html>
