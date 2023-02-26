@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\Api\UserController;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
 
@@ -32,3 +33,12 @@ Route::delete('user/{id}',function($id){
 Route::put('user/{id}',function($id){
     return response("put".$id,200);
 });
+
+
+Route::get('test',function(){
+
+p("working");
+
+
+});
+Route::post('user/store',[UserController::class,'store']);
