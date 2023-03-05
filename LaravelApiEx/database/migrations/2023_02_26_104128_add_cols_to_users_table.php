@@ -16,7 +16,7 @@ return new class extends Migration
             $table->text('address')->nullable();
             $table->boolean('status')->default(1)
             ->comment('1=active, 0=inactive');
-            $table->string('pincode',6);
+            $table->string('pincode',6) ->nullable();
         });
     }
 

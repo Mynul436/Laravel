@@ -37,8 +37,7 @@ Route::put('user/{id}',function($id){
 
 Route::get('test',function(){
 
-p("working");
-
-
-});
+p("working");});
 Route::post('user/store',[UserController::class,'store']);
+
+Route::get('user/get',[UserController::class,'index']);
