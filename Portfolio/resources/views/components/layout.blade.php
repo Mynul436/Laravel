@@ -16,13 +16,14 @@
         <div class="row">
             <div class="col-sm-2">
                 @include('include.sidebar')
+            </div>
                 <div class="col-sm-10">
                     {{$content}}
                 </div>
-            </div>
+            
         </div>
     </div>
-    <script src="{{asset('js/all.min.js')}}"></script>
+    <script src="{{asset('js/all.js')}}"></script>
     <script src="{{asset('js/bootstrap.bundle.js')}}"></script>
 </body>
 </html>
