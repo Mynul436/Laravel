@@ -11,7 +11,14 @@
                 <div class="p-6 text-gray-900 dark:text-gray-100">
                     {{ __("You're logged in!") }}
                 </div>
+                
             </div>
+            <div class="p-6 text-gray-900 dark:text-gray-100">
+                <a href="{{route('user.test')}}"> User</a>
+             </div>
+             <div class="p-6 text-gray-900 dark:text-gray-100">
+                <a href="{{route('user-search',['model' => 'your_model_value_here'])}}"> Search</a>
+             </div>
         </div>
     </div>
 </x-app-layout>
